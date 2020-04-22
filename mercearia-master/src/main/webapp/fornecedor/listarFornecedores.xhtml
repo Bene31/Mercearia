@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 
+ 
+<ui:composition template="/template/layoutBase.xhtml">
+ 
+	<ui:define name="content">
+    
+	    <h1> Lista de Fornecedores </h1>
+	    
+	    <h:panelGroup id="painel">    
+	    	<h:form>
+	              
+	            <h1>1</h1>  
+	            
+	            <p:dataTable id="tabelaUsuarios" var="fornecedor" value="#{fornecedoreController.listarFornecedores()}"
+                                                            tableStyleClass="table table-striped table-bordered table-hover table-checkable order-column"
+                                                            emptyMessage="#{messages['label.semRegistros']}">
+
+                              <f:facet name="header">
+                                  <p:outputPanel>
+                                      <h:outputText value="Fornecedores" />
+                                  </p:outputPanel>
+                              </f:facet>
+
+                              <p:column headerText="Id">
+                                  <h:outputText value="#{fornecedor.id}" />
+                              </p:column>
+                              
+                              <p:column headerText="Codigo">
+                                  <h:outputText value="#{fornecedor.codigo}" />
+                              </p:column>   
+                              
+                              <p:column headerText="Nome">
+                                  <h:outputText value="#{fornecedor.nome}" />
+                              </p:column> 
+                              
+                              <p:column headerText="CNPJ">
+                                  <h:outputText value="#{fornecedor.cnpj}" />
+                              </p:column>
+                              
+                              <p:column headerText="INSC">
+                                  <h:outputText value="#{fornecedor.insc}" />
+                              </p:column>
+                              
+                              <p:column headerText="Telefone">
+                                  <h:outputText value="#{fornecedor.telefone}" />
+                              </p:column>
+                              
+                              <p:column headerText="FAX">
+                                  <h:outputText value="#{fornecedor.fax}" />
+                              </p:column>
+                              
+                              <p:column headerText="CEP">
+                                  <h:outputText value="#{fornecedor.cep}" />
+                              </p:column>
+                              
+                              <p:column headerText="Endereco">
+                                  <h:outputText value="#{fornecedor.endereco}" />
+                              </p:column>
+                              
+                              <p:column headerText="Cidade">
+                                  <h:outputText value="#{fornecedor.cidade}" />
+                              </p:column>
+                              
+                              <p:column headerText="UF">
+                                  <h:outputText value="#{fornecedor.uf}" />
+                              </p:column>
+                              
+                              <p:column headerText="Numero">
+                                  <h:outputText value="#{fornecedor.numero}" />
+                              </p:column>
+                              
+                              <p:column headerText="Bairro">
+                                  <h:outputText value="#{fornecedor.bairro}" />
+                              </p:column>
+                              
+                              <p:column headerText="Email">
+                                  <h:outputText value="#{fornecedor.email}" />
+                              </p:column>
+                              
+                              
+                          </p:dataTable>
+            
+            </h:form>
+          </h:panelGroup> 
+ 
+ 
+	</ui:define>
+ 
+</ui:composition>
+</html>

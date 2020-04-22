@@ -21,7 +21,7 @@ public class ProdutoController implements Serializable {
 	private FornecedorDao fornecedorDao = new FornecedorDao();
     private Produto produto = new Produto();
     private List<Produto> produtos = new ArrayList<>();
-    private List<Fornecedor> forencedores = new ArrayList<>();
+    private List<Fornecedor> fornecedores = new ArrayList<>();
     private Fornecedor fornecedorSelecionado = new Fornecedor();
     private Long fornecedorId = 1L;
       	
@@ -35,8 +35,8 @@ public class ProdutoController implements Serializable {
 	}
 	
 	public List<Fornecedor> fornecedoresDisponiveis() {
-		forencedores = fornecedorDao.recuperarTodosFornecedores();
-		return forencedores;
+		fornecedores = fornecedorDao.recuperarTodosFornecedores();
+		return fornecedores;
 	}
 		
 	public Produto getProduto() {
@@ -55,12 +55,12 @@ public class ProdutoController implements Serializable {
 		this.produtos = produtos;
 	}
 
-	public List<Fornecedor> getForencedores() {
-		return forencedores;
+	public List<Fornecedor> getFornecedores() {
+		return fornecedores;
 	}
 
-	public void setForencedores(List<Fornecedor> forencedores) {
-		this.forencedores = forencedores;
+	public void setFornecedores(List<Fornecedor> fornecedores) {
+		this.fornecedores = fornecedores;
 	}
 
 	public Fornecedor getFornecedorSelecionado() {

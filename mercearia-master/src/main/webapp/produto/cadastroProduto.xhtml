@@ -12,7 +12,7 @@
  
 	<ui:define name="content">
     
-	    <h1> Cadstro de produto </h1>
+	    <h1> Cadastro de produto </h1>
 	    
 	    <h:panelGroup id="painel">    
 	    	<h:form>
@@ -30,14 +30,77 @@
 	                <label>Descricao</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_nome" size="100" value="#{produtoController.produto.descricao}"/>
+	                        <h:inputText id="form_produto_descricao" size="100" value="#{produtoController.produto.descricao}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Marca</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_marca" size="100" value="#{produtoController.produto.marca}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Tipo</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_tipo" size="100" value="#{produtoController.produto.tipo}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Quantidade</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_quantidade" size="100" value="#{produtoController.produto.quantidade}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Valor Compra</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_valorCompra" size="100" value="#{produtoController.produto.valorCompra}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Valor Venda</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_valorVenda" size="100" value="#{produtoController.produto.valorVenda}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Data Fabricacao</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_dataFab" size="100" value="#{produtoController.produto.dataFab}"/>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div>
+	                <label>Data Vencimento</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_produto_dataVen" size="100" value="#{produtoController.produto.dataVen}"/>
 	                    </div>
 	                </div>
 	            </div>
 	            
 	            <h:selectOneMenu value="#{produtoController.produto.fornecedor}" converter="omnifaces.SelectItemsConverter">
 	                 <f:selectItem
-	                         itemLabel="Escolha"
+	                         itemLabel="Fornecedor"
 	                         itemValue="#{null}" />
 	                 <f:selectItems  var="fornecedor"
 	                                 value="#{produtoController.fornecedoresDisponiveis()}"

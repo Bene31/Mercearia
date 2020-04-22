@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 
+ 
+<ui:composition template="/template/layoutBase.xhtml">
+ 
+	<ui:define name="content">
+    
+	    <h1> Listar Clientes </h1>
+	    
+	    <h:panelGroup id="painel">    
+	    	<h:form>
+	              
+	            <h1>1</h1>  
+	            
+	            <p:dataTable id="tabelaUsuarios" var="cliente" value="#{clienteController.listarClientes()}"
+                                                            tableStyleClass="table table-striped table-bordered table-hover table-checkable order-column"
+                                                            emptyMessage="#{messages['label.semRegistros']}">
+
+                              <f:facet name="header">
+                                  <p:outputPanel>
+                                      <h:outputText value="Cliente" />
+                                  </p:outputPanel>
+                              </f:facet>
+
+                              <p:column headerText="Id">
+                                  <h:outputText value="#{cliente.id}" />
+                              </p:column>
+                              
+                              <p:column headerText="Codigo">
+                                  <h:outputText value="#{cliente.codigo}" />
+                              </p:column>   
+                              
+                              <p:column headerText="Nome">
+                                  <h:outputText value="#{cliente.nome}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Telefone 1">
+                                  <h:outputText value="#{cliente.telefone1}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Telefone 2">
+                                  <h:outputText value="#{cliente.telefone2}" />
+                              </p:column>  
+                              
+                              <p:column headerText="CEP">
+                                  <h:outputText value="#{cliente.cep}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Endereço">
+                                  <h:outputText value="#{cliente.endereco}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Cidade">
+                                  <h:outputText value="#{cliente.cidade}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Bairro">
+                                  <h:outputText value="#{cliente.bairro}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Complemento">
+                                  <h:outputText value="#{cliente.complemento}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Numero">
+                                  <h:outputText value="#{cliente.numero}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Email">
+                                  <h:outputText value="#{cliente.email}" />
+                              </p:column>  
+                              
+                              <p:column headerText="Saldo">
+                                  <h:outputText value="#{cliente.saldo}" />
+                              </p:column>  
+                              
+                          </p:dataTable>
+            
+            </h:form>
+          </h:panelGroup> 
+ 
+ 
+	</ui:define>
+ 
+</ui:composition>
+</html>

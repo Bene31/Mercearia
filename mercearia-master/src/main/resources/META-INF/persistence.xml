@@ -12,18 +12,23 @@
         <!-- entidade mapeada -->
         <class>br.com.mercearia.model.Produto</class>
         <class>br.com.mercearia.model.Fornecedor</class>
+        <class>br.com.mercearia.model.Pedido</class>
+        <class>br.com.mercearia.model.Cliente</class>
+        <class>br.com.mercearia.model.MonitEnt</class>
+        <class>br.com.mercearia.model.MonitSai</class>
+        <class>br.com.mercearia.model.Caixa</class>
         
  
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mercearia" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/mercearia" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="123456" />
+            <property name="javax.persistence.jdbc.password" value="" />
  
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- update create-drop -->
+ <!--            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> update create-drop -->
         </properties>
  
     </persistence-unit>

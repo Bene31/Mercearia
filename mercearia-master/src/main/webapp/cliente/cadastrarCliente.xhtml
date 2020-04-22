@@ -12,7 +12,7 @@
  
 	<ui:define name="content">
     
-	    <h1> Cadastro de fornecedor </h1>
+	    <h1> Cadastro de cliente </h1>
 	    
 	    <h:panelGroup id="painel">    
 	    	<h:form>
@@ -21,7 +21,7 @@
 	                <label>Codigo</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_codigo" size="100" value="#{fornecedoreController.fornecedor.codigo}"/>
+	                        <h:inputText id="form_cliente_codigo" size="100" value="#{clienteController.cliente.codigo}"/>
 	                    </div>
 	                </div>
 	            </div>    
@@ -30,52 +30,34 @@
 	                <label>Nome</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_nome" size="100" value="#{fornecedoreController.fornecedor.nome}"/>
+	                        <h:inputText id="form_cliente_nome" size="100" value="#{clienteController.cliente.nome}"/>
 	                    </div>
 	                </div>
 	            </div>    
 	            
 	            <div>
-	                <label>CNPJ</label>
+	                <label>Telefone 1</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_cnpj" size="100" value="#{fornecedoreController.fornecedor.cnpj}"/>
-	                    </div>
-	                </div>
-	            </div>                
-	            
-	            <div>
-	                <label>INSC</label>
-	                <div>
-	                    <div class="input-group">
-	                        <h:inputText id="form_produto_insc" size="100" value="#{fornecedoreController.fornecedor.insc}"/>
+	                        <h:inputText id="form_cliente_telefone1" size="100" value="#{clienteController.cliente.telefone1}"/>
 	                    </div>
 	                </div>
 	            </div>    
 	            
 	            <div>
-	                <label>Telefone</label>
+	                <label>Telefone 2</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_telefone" size="100" value="#{fornecedoreController.fornecedor.telefone}"/>
+	                        <h:inputText id="form_cliente_telefone2" size="100" value="#{clienteController.cliente.telefone2}"/>
 	                    </div>
 	                </div>
-	            </div>
+	            </div>    
 	            
-	            <div>
-	                <label>Fax</label>
-	                <div>
-	                    <div class="input-group">
-	                        <h:inputText id="form_produto_fax" size="100" value="#{fornecedoreController.fornecedor.fax}"/>
-	                    </div> 
-	                </div>
-	            </div>        
-	                        
 	            <div>
 	                <label>CEP</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_cep" size="100" value="#{fornecedoreController.fornecedor.cep}"/>
+	                        <h:inputText id="form_cliente_cep" size="100" value="#{clienteController.cliente.cep}"/>
 	                    </div>
 	                </div>
 	            </div>    
@@ -84,57 +66,67 @@
 	                <label>Endereco</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_endereco" size="100" value="#{fornecedoreController.fornecedor.endereco}"/>
-	                    </div>
-	                </div>
-	            </div>       
-	            
-	            <div>
-	                <label>Cidade</label>
-	                <div>
-	                    <div class="input-group">
-	                        <h:inputText id="form_produto_cidade" size="100" value="#{fornecedoreController.fornecedor.cidade}"/>
+	                        <h:inputText id="form_cliente_endereco" size="100" value="#{clienteController.cliente.endereco}"/>
 	                    </div>
 	                </div>
 	            </div>    
 	            
 	            <div>
-	                <label>UF</label>
+	                <label>Cidade</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_uf" size="100" value="#{fornecedoreController.fornecedor.uf}"/>
+	                        <h:inputText id="form_cliente_cidade" size="100" value="#{clienteController.cliente.cidade}"/>
 	                    </div>
 	                </div>
-	            </div>  
-	            
-	            <div>
-	                <label>Numero</label>
-	                <div>
-	                    <div class="input-group">
-	                        <h:inputText id="form_produto_numero" size="100" value="#{fornecedoreController.fornecedor.numero}"/>
-	                    </div>
-	                </div>
-	            </div>      
+	            </div>    
 	            
 	            <div>
 	                <label>Bairro</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_bairro" size="100" value="#{fornecedoreController.fornecedor.bairro}"/>
+	                        <h:inputText id="form_cliente_bairro" size="100" value="#{clienteController.cliente.bairro}"/>
 	                    </div>
 	                </div>
-	            </div>     
+	            </div>    
+	            
+	            <div>
+	                <label>Complemento</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_cliente_complemento" size="100" value="#{clienteController.cliente.complemento}"/>
+	                    </div>
+	                </div>
+	            </div>    
+	            
+	            <div>
+	                <label>Numero</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_cliente_numero" size="100" value="#{clienteController.cliente.numero}"/>
+	                    </div>
+	                </div>
+	            </div>    
 	            
 	            <div>
 	                <label>Email</label>
 	                <div>
 	                    <div class="input-group">
-	                        <h:inputText id="form_produto_email" size="100" value="#{fornecedoreController.fornecedor.email}"/>
+	                        <h:inputText id="form_cliente_email" size="100" value="#{clienteController.cliente.email}"/>
 	                    </div>
 	                </div>
-	            </div>           
-	                        
-	            <h:commandLink action="#{fornecedoreController.salvarFornecedor()}" value="Salvar"> </h:commandLink>  
+	            </div>    
+	            
+	            <div>
+	                <label>Saldo</label>
+	                <div>
+	                    <div class="input-group">
+	                        <h:inputText id="form_cliente_saldo" size="100" value="#{clienteController.cliente.saldo}"/>
+	                    </div>
+	                </div>
+	            </div>    
+	            
+	            	                        
+	            <h:commandLink action="#{clienteController.salvarCliente()}" value="Salvar"> </h:commandLink>    
             
             </h:form>
           </h:panelGroup> 

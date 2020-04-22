@@ -12,7 +12,7 @@
  
 	<ui:define name="content">
     
-	    <h1> Listar de produtos </h1>
+	    <h1> Lista de produtos </h1>
 	    
 	    <h:panelGroup id="painel">    
 	    	<h:form>
@@ -41,15 +41,42 @@
                                   <h:outputText value="#{produto.descricao}" />
                               </p:column> 
                               
+                              <p:column headerText="Marca">
+                                  <h:outputText value="#{produto.marca}" />
+                              </p:column> 
+                              
+                              <p:column headerText="Tipo">
+                                  <h:outputText value="#{produto.tipo}" />
+                              </p:column> 
+                              
                               <p:column headerText="Quantidade">
                                   <h:outputText value="#{produto.quantidade}" />
                               </p:column>
+                              
+                              <p:column headerText="Valor Compra">
+                                  <h:outputText value="#{produto.valorCompra}" />
+                              </p:column> 
+                              
+                              <p:column headerText="Valor Venda">
+                                  <h:outputText value="#{produto.valorVenda}" />
+                              </p:column> 
+                              
+                              <p:column headerText="Data Fabricacao">
+                                  <h:outputText value="#{produto.dataFab}" />
+                              </p:column> 
+                              
+                              <p:column headerText="Data Vencimento">
+                                  <h:outputText value="#{produto.dataVen}" />
+                              </p:column> 
                               
                                <p:column headerText="Fornecedor">
                                   <h:outputText value="#{produto.fornecedor.nome}" />
                               </p:column>
                               
+                              
                           </p:dataTable>
+                          
+                  
             
             </h:form>
           </h:panelGroup> 

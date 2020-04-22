@@ -9,6 +9,7 @@ import javax.inject.Named;
 import br.com.mercearia.dao.ProdutoDao;
 import br.com.mercearia.model.Produto;
 
+
 @ViewScoped
 @Named(value="homeController")
 public class HomeController implements Serializable {

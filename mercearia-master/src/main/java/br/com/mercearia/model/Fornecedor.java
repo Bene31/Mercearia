@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+//import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -59,8 +59,8 @@ public class Fornecedor implements Serializable {
 	@Column
 	private String email;
 	
-	@OneToMany(mappedBy="fornecedor")
-	private List<Produto> produtos;
+	//@OneToMany(mappedBy="fornecedor")
+	//private List<Produto> produtos;
 	
 	public Fornecedor() {		
 	}
@@ -79,7 +79,7 @@ public class Fornecedor implements Serializable {
 		this.numero = numeroEntrada;
 		this.bairro = bairroEntrada;
 		this.email = emailEntrada;
-		this.produtos = produtos;
+		//this.produtos = produtos;
 	}	
 
 	public Long getId() {
@@ -194,13 +194,13 @@ public class Fornecedor implements Serializable {
 		this.email = email;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtos;
-	}
+	//public List<Produto> getProdutos() {
+	//	return produtos;
+	//}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
-	}
+	//public void setProdutos(List<Produto> produtos) {
+		//this.produtos = produtos;
+	//}
 
 }
 	

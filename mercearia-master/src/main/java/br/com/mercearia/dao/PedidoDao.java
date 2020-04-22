@@ -8,36 +8,35 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.mercearia.model.Pedido;
-import br.com.mercearia.model.Produto;
 
-public class ProdutoDao {
+public class PedidoDao {
 	
 	// Gerenciamento e acesso ao banco de dados
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("unit_app");	
 	private EntityManager em = factory.createEntityManager();    
 	
-	public Produto inserirProduto(Produto produto) throws Exception {
+	public Pedido inserirPedido(Pedido pedido) throws Exception {
 		try {
 			em.getTransaction().begin();
 			
-			em.persist(produto);
+			em.persist(pedido);
 			
 			em.getTransaction().commit();
-			return produto;
+			return pedido;
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 		    throw new Exception(e);
 		}
   }
 	
-	public List<Produto> recuperarTodosProdutos() {
-		List<Produto> produto = new ArrayList<>();	
+	public List<Pedido> recuperarTodosPedido() {
+		List<Pedido> pedido = new ArrayList<>();	
 		try {
-			produto = em.createQuery("Select p from " + Produto.class.getSimpleName() + " p").getResultList();			
+			pedido = em.createQuery("Select p from " + Pedido.class.getSimpleName() + " p").getResultList();			
 		} catch (Exception e) {			
 		   System.out.println(e.getMessage());		   
 		}
-		return produto;
+		return pedido;
   }
 	
 	

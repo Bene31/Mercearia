@@ -7,37 +7,39 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.mercearia.model.Pedido;
-import br.com.mercearia.model.Produto;
+import br.com.mercearia.model.MonitEnt;
 
-public class ProdutoDao {
+public class MonitEntDao {
 	
 	// Gerenciamento e acesso ao banco de dados
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("unit_app");	
 	private EntityManager em = factory.createEntityManager();    
 	
-	public Produto inserirProduto(Produto produto) throws Exception {
+	public MonitEnt inserirMonitEnt(MonitEnt monitEnt) throws Exception {
 		try {
 			em.getTransaction().begin();
 			
-			em.persist(produto);
+			em.persist(monitEnt);
 			
 			em.getTransaction().commit();
-			return produto;
+			return monitEnt;
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 		    throw new Exception(e);
 		}
   }
 	
-	public List<Produto> recuperarTodosProdutos() {
-		List<Produto> produto = new ArrayList<>();	
+	public List<MonitEnt> recuperarTodosMonitEnts() throws Exception {		
 		try {
-			produto = em.createQuery("Select p from " + Produto.class.getSimpleName() + " p").getResultList();			
+			List<MonitEnt> monitEnts = new ArrayList<>();
+			em.getTransaction().begin();
+			
+			monitEnts = em.createQuery("Select p from " + MonitEnt.class.getSimpleName() + " p").getResultList();
+			
+			return monitEnts;
 		} catch (Exception e) {			
-		   System.out.println(e.getMessage());		   
+		    throw new Exception(e);
 		}
-		return produto;
   }
 	
 	
